@@ -27,23 +27,26 @@ void sort012(int *arr,int *arr2,int n)
     for(int i=0;i<n;i++){
         if(c0!=0){
             arr2[i]=0;
+            c0--;
         }
         else if(c1!=0){
             arr2[i]=1;
+            c1--;
         }
-        else{
+        else if(c2!=0){
             arr2[i]=2;
+            c2--;
         }
     }
 }
 void print(int arr2[],int n){
     for(int i=0;i<n;i++){
-        cout<<arr2[i];
+        cout<<arr2[i]<<" ";
     }
 }
 int main(){
-    int n=10;
-    int *arr=new int [n];;
+    int n=5;
+    int *arr=new int [n];
     for(int i=0;i<n;i++){
         cin>>arr[i];
     }
