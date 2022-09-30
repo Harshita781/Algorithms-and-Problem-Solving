@@ -1,15 +1,11 @@
 /*
-Given an array of integers nums containing n + 1 integers where each integer is in the range [1, n] inclusive.
-
-There is only one repeated number in nums, return this repeated number.
-
-You must solve the problem without modifying the array nums and uses only constant extra space.
+Given an array of N integers arr[] where each element represents the max length of the jump that can be made forward from that element. Find the minimum number of jumps to reach the end of the array (starting from the first element). If an element is 0, then you cannot move through that element.
+Note: Return -1 if you can't reach the end of the array.
 Example 1:
-Input: nums = [1,3,4,2,2]
-Output: 2
-Example 2:
-Input: nums = [3,1,3,4,2]
-Output: 3
+Input:
+N = 11 
+arr[] = {1, 3, 5, 8, 9, 2, 6, 7, 6, 8, 9} 
+Output: 3 
 */
 #include <iostream>
 #include <vector>
