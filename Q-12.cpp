@@ -1,20 +1,14 @@
-#include<iostream>
+#include<bits/stdc++.h>
+#include<algorithm>
 using namespace std;
 void mergesortedarray(int a[],int b[],int n, int m,int k){
     for(int i=0;i<n;i++){
          for(int j=0;j<m;j++){
           if(a[i]>b[j]){
-            int temp=a[i];
-            a[i]=b[j];
-            b[j]=temp;
+            swap(a[i],b[j]);
           }
          }
-        for(int k=0;k<n;k++){
-           cout<<a[i]<<" ";
-        }
-        for(int k=0;k<m;k++){
-          cout<<" "<<b[k];
-        }
+      
     }
 }
 void print(int a[],int k){
@@ -28,6 +22,7 @@ int main(){
       int b[]={6,7,8,9};
       int k=n+m;
       mergesortedarray(a,b,n,m,k);
+      sort(b,m);
      // print(a,k);
       return 0;
 }
