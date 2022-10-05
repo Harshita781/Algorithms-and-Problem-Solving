@@ -8,7 +8,7 @@ void mergesortedarray(int a[],int b[],int n, int m,int k){
             swap(a[i],b[j]);
           }
          }
-      
+      sort(b,m); 
     }
 }
 void print(int a[],int k){
@@ -22,7 +22,6 @@ int main(){
       int b[]={6,7,8,9};
       int k=n+m;
       mergesortedarray(a,b,n,m,k);
-      sort(b,m);
      // print(a,k);
       return 0;
 }
