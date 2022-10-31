@@ -7,7 +7,7 @@ vector<vector<int>> merge(vector<vector<int>>& intervals) {
         sort(intervals.begin(),intervals.end());
         vector<vector<int>> merged;
         for(auto interval: intervals){
-            if(merged.empty()|| merged.back()[1]<intervals[0]){
+            if(merged.empty()|| merged.back()[1] < intervals[0]){
                 merged.push_back(intervals);
                 
             }
