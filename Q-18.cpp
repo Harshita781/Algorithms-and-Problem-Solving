@@ -1,21 +1,23 @@
-#include<iostream>
-#include<vector>
-#include<algorithm>
+#include <iostream>
+#include <iterator>
+#include <unordered_map>
 using namespace std;
-int maxProfit(vector<int> &prices)
-{
-    int profit = 0;
-    int mini = prices[0];
-    for (int i = 1; i < prices.size(); i++)
-    {
-        mini = min(prices[i], mini);
-        profit = max(profit, (prices[i] - mini));
+int getPairsCount(int arr[], int n, int k) {
+        int tc=0;
+        unordered_map<int, int> mp;
+        for(int i=0; i<n; i++){
+            if(mp.find(k-arr[i]) != mp.end())
+                tc += mp[k-arr[i]];
+            mp[arr[i]]++;
+        }
+        return tc;
     }
-    return profit;
-}
 int main()
 {
-    vector<int> prices = {1, 2, 4};
-    cout<<maxProfit(prices);
+    int n;
+    int arr[]={1, 5, 7, 1};
+    n=sizeof(arr)/sizeof(arr[0]);
+    int k=6;
+    cout<<getPairsCount(arr,n,k);
     return 0;
 }
